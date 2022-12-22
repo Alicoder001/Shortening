@@ -1,0 +1,17 @@
+.today {
+	background-image: url("../../images/svg/bg-svg.svg");
+	background-size: cover;
+	.container {
+		display: flex;
+		align-items: center;
+	}
+	&__info {
+		width: 100%;
+		text-align: center;
+		padding: 5.7rem 0 5.2rem;
+	}
+	&__title {
+		color: white;
+		margin-bottom: 3.2rem;
+	}
+}

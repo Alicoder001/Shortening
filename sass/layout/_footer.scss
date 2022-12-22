@@ -1,0 +1,47 @@
+.footer {
+	padding: 7.1rem 0;
+	background-color: #232127;
+	.container {
+		align-items: flex-start;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__nav {
+		display: flex;
+		column-gap: 10.1rem;
+	}
+	&__cards {
+		display: flex;
+		&-wrap {
+			&:first-child {
+				margin-right: 7.8rem;
+			}
+			&:last-child {
+				margin-left: 10.7rem;
+			}
+		}
+	}
+	&__category {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+	&__item {
+		&:first-child {
+			.footer__item-link {
+				color: white;
+			}
+			margin-bottom: 1.2rem;
+		}
+		&-link {
+			color: #bfbfbf;
+			font-weight: 500;
+		}
+	}
+
+	&__social {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 2.4rem;
+	}
+}

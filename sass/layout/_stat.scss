@@ -1,0 +1,103 @@
+.stat {
+	background-color: #f2f2f2;
+	padding: 20.4rem 0 12rem;
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 54rem;
+		&-title {
+			font-weight: 700;
+			letter-spacing: -1px;
+			margin-bottom: 1.8rem;
+		}
+		&-subt {
+			color: $subt-color;
+			font-size: 1.8rem;
+			line-height: 1.78;
+			letter-spacing: 0.12px;
+			margin-bottom: 10rem;
+		}
+	}
+	&__list {
+		display: flex;
+		column-gap: 3rem;
+		row-gap: 9.2rem;
+		position: relative;
+		align-items: center;
+		margin-bottom: 12rem;
+		@include responsive(max-tablet) {
+			flex-direction: column;
+			height: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+	&__line {
+		top: 15.2rem;
+		position: absolute;
+		height: 0.8rem;
+		width: 100%;
+		background-color: $blue;
+		@include responsive(max-tablet) {
+			top: 0;
+			height: 100%;
+			width: 0.8rem;
+		}
+	}
+	&__item {
+		padding: 7.7rem 3.2rem 4.1rem;
+		background-color: white;
+		border-radius: 5px;
+		position: relative;
+		top: 0;
+		@include responsive("tablet") {
+			text-align: center;
+		}
+		&:nth-last-child(2) {
+			top: 4.4rem;
+		}
+		&:last-child {
+			top: 8.8rem;
+		}
+		&-block {
+			position: absolute;
+			width: 100%;
+			height: 8.8rem;
+			top: -4.4rem;
+			left: 0;
+			padding: 0 3.2rem;
+			@include responsive("tablet") {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		&-icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 8.8rem;
+			height: 8.8rem;
+			background-color: $title-color;
+			border-radius: 50%;
+		}
+
+		&-title {
+			margin-bottom: 1.2rem;
+		}
+	}
+}

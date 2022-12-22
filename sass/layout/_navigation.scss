@@ -1,0 +1,78 @@
+.header {
+	z-index: 10;
+	background-color: white;
+	&__nav {
+		@include responsive(min-tablet) {
+			width: 100%;
+			text-align: center;
+			position: fixed;
+			top: 11rem;
+			left: 0;
+			display: inline-block;
+			transition: 0.2s;
+			row-gap: 3.2rem;
+		}
+		&-block {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			margin: auto;
+			row-gap: 3rem;
+			@include responsive(min-tablet) {
+				width: 90%;
+				top: 0;
+				flex-direction: column;
+				background-color: $second-color;
+				padding: 4rem 2rem;
+				border-radius: 1rem;
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		column-gap: 3rem;
+		@include responsive(tablet) {
+			column-gap: 2rem;
+			row-gap: 3rem;
+		}
+		@include responsive(min-tablet) {
+			width: 100%;
+			flex-direction: column;
+			border-bottom: 1px solid #9e9aa8;
+			padding-bottom: 3rem;
+		}
+	}
+	&__toggle {
+		display: none;
+		&:hover {
+			cursor: pointer;
+		}
+		@include responsive(min-tablet) {
+			display: inline-block;
+		}
+	}
+	&__item {
+		&-link {
+			color: $subt-color;
+			font-weight: 700;
+			font-size: 1.5rem;
+			line-height: 1.47;
+			&:hover {
+				color: $title-color;
+				@include responsive(min-tablet) {
+					color: pink;
+				}
+			}
+			@include responsive(min-tablet) {
+				font-size: 1.8rem;
+				color: white;
+			}
+		}
+	}
+}
+.scroll {
+	@include responsive(min-tablet) {
+		top: -45rem;
+	}
+}
