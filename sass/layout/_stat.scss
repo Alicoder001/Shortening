@@ -54,8 +54,12 @@
 		background-color: $blue;
 		@include responsive(max-tablet) {
 			top: 0;
+			left: 7.6rem;
 			height: 100%;
 			width: 0.8rem;
+		}
+		@include responsive(tablet) {
+			left: auto;
 		}
 	}
 	&__item {

@@ -47,7 +47,7 @@
 		}
 		&-wrap {
 			width: 100%;
-			text-align: center;
+
 			&:first-child {
 				margin-right: 7.8rem;
 				@include responsive(med-desktop) {
@@ -68,6 +68,10 @@
 		row-gap: 1rem;
 	}
 	&__item {
+		text-align: left;
+		@include responsive(max-phone) {
+			text-align: center;
+		}
 		&:first-child {
 			.footer__item-link {
 				color: white;

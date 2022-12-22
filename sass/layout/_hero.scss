@@ -78,6 +78,10 @@
 			padding: 1.4rem 3.2rem;
 			border: none;
 			border-radius: 10px;
+			color: black;
+			font-size: 2.2rem;
+			font-family: $font;
+			font-weight: 500;
 			&::placeholder {
 				font-size: 2rem;
 				line-height: 1.8rem;
@@ -85,6 +89,9 @@
 				color: $title-color;
 				opacity: 0.5;
 				font-weight: 500;
+			}
+			&:focus {
+				outline: none;
 			}
 		}
 		&-btn {
@@ -103,6 +110,10 @@
 			height: 6.4rem;
 			@include responsive(min-tablet) {
 				width: 100%;
+			}
+			&:hover {
+				cursor: pointer;
+				background-color: #9ae3e3;
 			}
 		}
 	}
