@@ -1,11 +1,37 @@
 .hero {
+	background-image: url("../../images/svg/hero_bg.svg");
+	background-position: right -15.5rem top 0;
+	background-repeat: no-repeat;
+	@include responsive(med-desktop) {
+		background-position: right -25.5rem top 0;
+	}
+	@include responsive(max-tablet) {
+		background-position: left 4rem top 0;
+	}
+	@include responsive(min-tablet) {
+		background-size: 55rem;
+	}
+	@include responsive(max-phone) {
+		background-size: 48.6rem;
+	}
 	.container {
 		position: relative;
+
+		@include responsive(max-tablet) {
+			padding-top: 49rem;
+		}
+		@include responsive(min-tablet) {
+			padding-top: 37rem;
+		}
+		@include responsive(max-phone) {
+			padding-top: 37rem;
+		}
 	}
 	background-color: white;
 	&__info {
 		max-width: 56.5rem;
 		width: 100%;
+
 		@include responsive(min-tablet) {
 			max-width: 50rem;
 		}
@@ -70,6 +96,9 @@
 		@include responsive(min-tablet) {
 			padding: 2.4rem;
 			flex-direction: column;
+		}
+		&-link {
+			display: inline-block;
 		}
 		&-inp {
 			max-width: 77rem;

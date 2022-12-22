@@ -3,14 +3,7 @@
 	margin-bottom: 7.8rem;
 	.container {
 		display: flex;
-		padding: 0 16.5rem;
 		position: relative;
-		@include responsive(min-desktop) {
-			padding: 0 4rem;
-		}
-		@include responsive(tablet) {
-			padding: 0 2.4rem;
-		}
 	}
 	&__nav {
 		width: 100%;
@@ -50,12 +43,12 @@
 		// 	display: none;
 		// }
 	}
-
 	&__login {
 		color: $subt-color;
 		font-weight: 700;
 		font-size: 1.5rem;
 		line-height: 1.47;
+		display: inline-block;
 		&:hover {
 			color: $title-color;
 			@include responsive(min-tablet) {
