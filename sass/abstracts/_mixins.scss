@@ -1,4 +1,9 @@
 @mixin responsive($breakpoint) {
+	@if $breakpoint == med-desktop {
+		@media screen and (max-width: 1250px) {
+			@content;
+		}
+	}
 	@if $breakpoint == min-desktop {
 		@media screen and (max-width: 1050px) {
 			@content;

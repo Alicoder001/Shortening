@@ -5,19 +5,60 @@
 		align-items: flex-start;
 		display: flex;
 		justify-content: space-between;
+		@include responsive(tablet) {
+			row-gap: 4.9rem;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__nav {
 		display: flex;
 		column-gap: 10.1rem;
+		@include responsive(med-desktop) {
+			column-gap: 8rem;
+		}
+		@include responsive(max-tablet) {
+			column-gap: 4rem;
+		}
+		@include responsive(tablet) {
+			row-gap: 4.9rem;
+			row-gap: 4rem;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
 	}
 	&__cards {
 		display: flex;
+		@include responsive(med-desktop) {
+			column-gap: 8rem;
+		}
+		@include responsive(max-tablet) {
+			column-gap: 3rem;
+		}
+		@include responsive(max-tablet) {
+			width: 100%;
+			justify-content: space-evenly;
+		}
+		@include responsive(max-phone) {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 3.8rem;
+		}
 		&-wrap {
+			width: 100%;
+			text-align: center;
 			&:first-child {
 				margin-right: 7.8rem;
+				@include responsive(med-desktop) {
+					margin: 0;
+				}
 			}
 			&:last-child {
 				margin-left: 10.7rem;
+				@include responsive(med-desktop) {
+					margin: 0;
+				}
 			}
 		}
 	}
@@ -30,12 +71,19 @@
 		&:first-child {
 			.footer__item-link {
 				color: white;
+				font-weight: 700;
+				&:hover {
+					cursor: default;
+				}
 			}
 			margin-bottom: 1.2rem;
 		}
 		&-link {
 			color: #bfbfbf;
 			font-weight: 500;
+			&:hover {
+				color: $blue;
+			}
 		}
 	}
 
@@ -43,5 +91,12 @@
 		display: flex;
 		justify-content: space-between;
 		column-gap: 2.4rem;
+		@include responsive(max-tablet) {
+			column-gap: 1.5rem;
+		}
+		@include responsive(max-tablet) {
+			max-width: 16.8rem;
+			width: 100%;
+		}
 	}
 }

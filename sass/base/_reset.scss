@@ -20,7 +20,9 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 16.5rem;
-	
+	@include responsive(med-desktop) {
+		padding: 0 8rem;
+	}
 	@include responsive(min-desktop) {
 		padding: 0 4rem;
 	}
